@@ -1,0 +1,6 @@
+<h1>{{ item.name }}</h1>
+<ul>      
+{% for purchase in item.purchase_set.all %}
+    <li>{{ purchase.name }}, {{ puchase.age }}, {{ purchase.date_purchase }}</li>
+{% endfor %}
+</ul>

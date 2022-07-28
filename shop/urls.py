@@ -1,7 +1,8 @@
 from django.urls import path, include
-from .views import greetings
+from . import views
 
 urlpatterns = [
-    path('shop/greetings/', greetings),
+    path('greetings/', views.greetings, name='greetings'),
+    path('', views.list_item, name='index'),
+    path('<id>/', views.detail_item, name='detail_item'),
 ]
-

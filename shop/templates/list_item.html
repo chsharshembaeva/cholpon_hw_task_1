@@ -1,0 +1,10 @@
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li><a href="{% url 'detail' item.id %}">{{ item.name }}, {{ item.price }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+
