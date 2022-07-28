@@ -1,7 +1,8 @@
+<h1>Item List</h1>
 {% if items %}
     <ul>
     {% for item in items %}
-        <li><a href="{% url 'detail' item.id %}">{{ item.name }}, {{ item.price }}</a></li>
+        <li><a href="{% url 'detail_item' item.id %}">{{ item.name }}, {{ item.price }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
